@@ -1,11 +1,11 @@
 # ci4-file-uploader
 Upload all kinds of data using the do_upload() method.
 
-*Note: * Copy the code below and paste it on your Controller class. and use it like:
+*Note:* Copy the code below and paste it on your Controller class. and use it like:
 
     $uploaded_file_name = $this->do_upload('file_name', 'images', ['jpg', 'jpeg', 'png']);
 
-*Code: * method to be copied.
+*Code:* method to be copied.
 
     /**
      * Upload any file by using the do_upload() method
