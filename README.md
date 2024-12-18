@@ -5,6 +5,8 @@ Upload all kinds of data using the do_upload() method.
 
     $uploaded_file_name = $this->do_upload('file_name', 'images', ['jpg', 'jpeg', 'png']);
 
+*Code: * method to be copied.
+
     /**
      * Upload any file by using the do_upload() method
      * @param string $fileName
