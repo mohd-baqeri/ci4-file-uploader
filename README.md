@@ -2,6 +2,7 @@
 Upload all kinds of data using the do_upload() method.
 
 *Note: * Copy the code below and paste it on your Controller class. and use it like:
+
     $uploaded_file_name = $this->do_upload('file_name', 'images', ['jpg', 'jpeg', 'png']);
 
     /**
