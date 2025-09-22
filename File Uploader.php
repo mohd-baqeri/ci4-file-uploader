@@ -21,7 +21,7 @@
 
         $newFileName = $fileName . time() . '-' . rand(1, 100) . '.' . $file->getExtension();
 
-        $file->move(ROOTPATH . 'assets/' . $path . '/', $newFileName);
+        $file->move(ROOTPATH . 'public/' . $path . '/', $newFileName);
 
         return $newFileName;
     }
