@@ -3,7 +3,12 @@ Upload all kinds of data using the do_upload() method.
 
 *Note:* Copy the code below and paste it on your Controller class. and use it like:
 
-    $uploaded_file_name = $this->do_upload('file_name', 'images', ['jpg', 'jpeg', 'png']);
+    if ($_FILES['site_logo']['name']) {
+        $file = $this->do_upload('site_logo', 'images', ['jpg', 'jpeg', 'png']);
+        if ($file == 'ext_error') {
+            return redirect()->back()->with('danger', 'File extension not allowed');
+        }
+    }
 
 *Code:* method to be copied.
 
@@ -29,7 +34,7 @@ Upload all kinds of data using the do_upload() method.
 
         $newFileName = $fileName . time() . '-' . rand(1, 100) . '.' . $file->getExtension();
 
-        $file->move(ROOTPATH . 'assets/' . $path . '/', $newFileName);
+        $file->move(ROOTPATH . 'public/' . $path . '/', $newFileName);
 
         return $newFileName;
     }
